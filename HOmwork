@@ -1,22 +1,8 @@
-print("welcome to python airlines")
-print("here choose your plane tickets")
-print("this is the list of tickets for worldwide cities")
+import datetime
 
-def hotelcost(nights):
-    return 140 * nights
+# Generate a list of month names using list comprehension
+months = [datetime.date(2000, m, 1).strftime('%B') for m in range(1, 13)]
 
-def flightcost(city):
-    if city == "los angeles":
-        return 700
-    elif city == "dubai":
-        return 900
-    elif city == "london":
-        return 300
-
-    else:
-        return 0   
-
-def totalcost(city, nights):
-    return hotelcost(nights) + flightcost(city)
-
-print("the total cost of your trip is", totalcost("los angeles", 5))
+# Display the months
+for month in months:
+    print(month)
