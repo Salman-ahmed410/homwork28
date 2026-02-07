@@ -1,0 +1,22 @@
+print("welcome to python airlines")
+print("here choose your plane tickets")
+print("this is the list of tickets for worldwide cities")
+
+def hotelcost(nights):
+    return 140 * nights
+
+def flightcost(city):
+    if city == "los angeles":
+        return 700
+    elif city == "dubai":
+        return 900
+    elif city == "london":
+        return 300
+
+    else:
+        return 0   
+
+def totalcost(city, nights):
+    return hotelcost(nights) + flightcost(city)
+
+print("the total cost of your trip is", totalcost("los angeles", 5))
